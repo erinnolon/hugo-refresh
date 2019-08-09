@@ -6,17 +6,21 @@
 {{- $font1     := replace .Site.Params.mainPage.fontFamily " " "+" -}}
 {{- $font2     := replace .Site.Params.sidebar.fontFamily " " "+" -}}
 {{- $font3     := replace .Site.Params.navbar.fontFamily " " "+" -}}
-{{/*  {{- $fontSizes := delimit .Site.Params.mainPage.sizes "," -}}  */}}
+{{- $font4     := replace .Site.Params.fonts.primary " " "+" -}}
+{{- $font5     := replace .Site.Params.fonts.secondary " " "+" -}}
+{{/*  {{- $fontSizes := delimit .Site.Params.mainPage.sizes "," -}} */}}
 {{/*  {{- $fontUrl1     := printf "https://fonts.googleapis.com/css?family=%s:%s" $font1 $fontSizes -}}
 {{- $fontUrl2     := printf "https://fonts.googleapis.com/css?family=%s:%s" $font2 $fontSizes -}}
-{{- $fontUrl3     := printf "https://fonts.googleapis.com/css?family=%s:%s" $font3 $fontSizes -}}  */}}
+{{- $fontUrl3     := printf "https://fonts.googleapis.com/css?family=%s:%s" $font3 $fontSizes -}} */}}
 {{- $fontUrl1  := printf "https://fonts.googleapis.com/css?family=%s" $font1 -}}
 {{- $fontUrl2  := printf "https://fonts.googleapis.com/css?family=%s" $font2 -}}
 {{- $fontUrl3  := printf "https://fonts.googleapis.com/css?family=%s" $font3 -}}
+{{- $fontUrl4  := printf "https://fonts.googleapis.com/css?family=%s" $font4 -}}
+{{- $fontUrl5  := printf "https://fonts.googleapis.com/css?family=%s" $font5 -}}
 
 {{- $favico := resources.Get "images/favicon.png" -}}
 <link rel="icon" type="image/png" href="{{- $favico.Permalink | relURL -}}" />
-{{/*  <link rel="icon" type="image/png" href="{{- "images/favicon.png" | relURL -}}" />  */}}
+{{/*  <link rel="icon" type="image/png" href="{{- "images/favicon.png" | relURL -}}" /> */}}
 
 <link href="{{- $fontUrl1 -}}" rel="stylesheet">
 <link href="{{- $fontUrl2 -}}" rel="stylesheet">
@@ -61,5 +65,5 @@
 
 {{- end -}}
 
-{{/*  <link rel="stylesheet" type="text/css" href="{{- "css/bulma.css" | absURL -}}">  */}}
-{{/*  <link rel="stylesheet" type="text/css" href="{{- "css/icons.css" | relURL -}}">  */}}
+{{/*  <link rel="stylesheet" type="text/css" href="{{- "css/bulma.css" | absURL -}}"> */}}
+{{/*  <link rel="stylesheet" type="text/css" href="{{- "css/icons.css" | relURL -}}"> */}}

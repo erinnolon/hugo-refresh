@@ -7,7 +7,7 @@ Hero styles
     padding-bottom: 6rem;
     .title, .subtitle {
         font-family: $fontMainPage, serif; //Press Start 2P
-        // font-family: 'Open Sans', sans-serif; 
+        // font-family: '$fontPrimary', sans-serif; 
     }
     .title {
         &.is-bold {
